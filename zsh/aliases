@@ -1,0 +1,12 @@
+# vim: ft=zsh
+
+alias ls="eza --group-directories-first"
+alias l="eza --oneline --group-directories-first"
+alias ll="eza --long --no-user --no-filesize --group-directories-first"
+alias la="eza --all --group-directories-first"
+alias lla="eza --all --long --no-user --no-filesize --group-directories-first"
+
+alias fzf="fzf --color=bg+:232"
+
+alias rtmux="tmux source ~/.tmux.conf"
+alias rzsh="source ~/.zshenv && source ~/.zprofile && source ~/.zshrc"

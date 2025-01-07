@@ -1,0 +1,25 @@
+# vim: ft=zsh
+
+[ -f $ZSH_CONFIG/aliases ] && source $ZSH_CONFIG/aliases
+[ -f $ZSH_CONFIG/functions ] && source $ZSH_CONFIG/functions
+[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
+
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+
+bindkey '^p' history-substring-search-up
+bindkey '^n' history-substring-search-down
+
+if ! zplug check; then
+  zplug install
+fi
+
+zplug load
+
+eval "$(starship init zsh)"
+
+if [[ -z $(echo $TMUX) ]]; then
+  tmux new -As0
+fi

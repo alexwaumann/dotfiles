@@ -1,0 +1,11 @@
+# vim: ft=zsh
+
+function j {
+  local query="'$1"
+  local directory=$(fd --follow --type d . $PROJECTS --max-depth 1 | fzf --query=$query --select-1)
+  if [[ -z $directory ]]; then
+    return 1
+  fi
+
+  cd $directory
+}

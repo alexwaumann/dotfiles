@@ -1,0 +1,18 @@
+# vim: ft=zsh
+
+export EDITOR="nvim"
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+
+export PROJECTS="$HOME/projects"
+export DOTFILES="$HOME/projects/dotfiles"
+
+export ZSH_CONFIG="$DOTFILES/zsh"
+export ZPLUG_HOME="/opt/homebrew/opt/zplug"
+export STARSHIP_CONFIG=$ZSH_CONFIG/starship.toml
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+export WORKON_HOME="$HOME/.pipenv"

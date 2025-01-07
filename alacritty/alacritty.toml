@@ -1,0 +1,23 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 12
+normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
+
+[window]
+decorations = "None"
+dynamic_padding = false
+opacity = 0.89
+startup_mode = "Maximized"
+decorations_theme_variant = "Dark"
+option_as_alt = "Both"
+
+[window.padding]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = true
